@@ -1,2 +1,4 @@
 .vs/
 Library/
+/obj
+/Logs
