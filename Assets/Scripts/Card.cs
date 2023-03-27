@@ -9,6 +9,8 @@ public class Card : MonoBehaviour
 
     [SerializeField] private Text myHp;
 
+    uint type = 0; //0 ÅÆÃæ  1ÅÆµ×
+
 
     private int hp;
     // private ArrayList<Card> m_cards = new ArrayList<Card>();
