@@ -123,6 +123,7 @@ public class Game : MonoBehaviour
                 {
                     //向自己发牌
                     m_cards[m_sendPk]?.GetComponent<Card>().setFront(1);
+                    //m_cards[m_sendPk]?.GetComponent<Card>().
                    m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, -500), 2);
 
                    

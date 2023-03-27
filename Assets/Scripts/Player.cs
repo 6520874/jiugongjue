@@ -7,8 +7,20 @@ public class Player : MonoBehaviour
 
     //ÊÖÉÏµÄÅÆ
     private List<int>  HandCard =  new List<int>();
-    private int m_hp = 0;
 
+    private int hp;
+
+    public int Hp
+    {
+        get
+        {
+            return hp;
+        }
+        set
+        {
+            hp = value;
+        }
+    }
 
     private void Awake()
     {
