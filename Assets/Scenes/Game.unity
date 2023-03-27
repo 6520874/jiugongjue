@@ -1707,7 +1707,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1636216702}
   - component: {fileID: 1636216701}
-  - component: {fileID: 1636216703}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -1729,6 +1728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myHpObj: {fileID: 193697907}
   enemyHpObj: {fileID: 1319915725}
+  bg: {fileID: 565413788}
 --- !u!4 &1636216702
 Transform:
   m_ObjectHideFlags: 0
@@ -1743,18 +1743,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1636216703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636216700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f0c637b7e7e472448202abce9388f8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1795002510
 PrefabInstance:
   m_ObjectHideFlags: 0

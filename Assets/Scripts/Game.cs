@@ -2,6 +2,7 @@ using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Resources;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class Game : MonoBehaviour
 {
     [SerializeField] private GameObject myHpObj;
     [SerializeField] private GameObject enemyHpObj;
+    [SerializeField] private GameObject bg;
 
     private Player m_player = new Player();
     private Player m_enemy = new Player();
@@ -44,7 +46,21 @@ public class Game : MonoBehaviour
         //myHpObj.transform.DOMove(new Vector2(100, 200),5f);
 
 
-        ResourcesLoader.Instance.LoadAsync("",null);
+        //¼ÓÔØ×ÊÔ´
+        ResourcesLoader.Instance.LoadAsync("Prefeab/Card", (obj) =>
+        {
+            if (obj != null)
+            {
+                GameObject  tt = (GameObject)Instantiate(obj, bg.transform);                 
+
+            }
+            else
+            {
+                Debug.Log("<color=red>no obj</color>");
+            }
+        });
+
+   
 
 
     }
