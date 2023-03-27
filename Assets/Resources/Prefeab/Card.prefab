@@ -210,8 +210,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myHp: {fileID: 0}
-  card:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  myBack: {fileID: 2800000, guid: 1dcc652661b953d4d9dd738cc5ea37d2, type: 3}
+  front: {fileID: 6473922834409602486}
+  back: {fileID: 3291144225060162849}
