@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Resources;
 using System.Runtime.CompilerServices;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,8 +14,8 @@ public class Game : MonoBehaviour
     [SerializeField] private GameObject enemyHpObj;
     [SerializeField] private GameObject bg;
 
-    //private Player m_player = new Player();
-    //private Player m_enemy = new Player();
+    private Player m_player = null;
+    private Player m_enemy = null;
 
     private float curTime = 0;
 
@@ -45,6 +46,9 @@ public class Game : MonoBehaviour
         //dotwen²å¼þ
 
         CreatePorker();
+        m_player =  this.gameObject.AddComponent<Player>();
+
+        m_enemy = this.gameObject.AddComponent<Player>();
 
         m_player.isMy = true;
         //Debug.Log("awake");

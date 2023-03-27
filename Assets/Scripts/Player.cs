@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     { 
-       Debug.Log("update");
+       //Debug.Log("update");
 
         if (handCard.Count > 2 && isMy)
         {
