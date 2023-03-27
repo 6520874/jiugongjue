@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Resources;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,7 +15,10 @@ public class Game : MonoBehaviour
 
     private Player m_player = new Player();
     private Player m_enemy = new Player();
-    
+
+    private float curTime = 0;
+
+    private int m_sendPk = 0;
 
     private int id;
 
@@ -107,11 +111,30 @@ public class Game : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
 
          if(m_cards.Count > 0)
         {
-            m_cards[0].transform.DOLocalMove(new Vector2(0, -500), 1);
+            this.curTime += Time.deltaTime;
+
+            if(this.curTime> 3)
+            {
+                if (m_sendPk < 8)
+                {
+                    //向自己发牌
+                    m_cards[m_sendPk]?.GetComponent<Card>().setFront(1);
+                   m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, -500), 2);
+
+                   
+                    //向电脑发牌
+                    m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, 500), 2);
+
+                }
+                this.curTime = 0;
+            }
+
+          
+           
              
         }
     }
