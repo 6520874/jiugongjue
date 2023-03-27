@@ -6,9 +6,11 @@ public class Player : MonoBehaviour
 {
 
     //手上的牌
-    private List<int>  HandCard =  new List<int>();
+    public List<GameObject>  handCard =  new List<GameObject>();
 
     private int hp;
+
+    public bool isMy = false;
 
     public int Hp
     {
@@ -35,4 +37,18 @@ public class Player : MonoBehaviour
 
     // Update is called once per fra
 
+    private void Update()
+    { 
+       Debug.Log("update");
+
+        if (handCard.Count > 2 && isMy)
+        {
+            for(int i=0;i < handCard.Count;i++)
+            {
+                //排序卡牌位置
+
+                handCard[i].transform.position  =   new Vector2(i*200, handCard[i].transform.position.y);
+            }
+        }
+    }
 }

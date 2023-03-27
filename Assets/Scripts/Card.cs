@@ -9,21 +9,19 @@ enum CardType
 }
 public class Card : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    [SerializeField] private Text myHp;
-
-    //[SerializeField] Image myDi;
+  
+    [SerializeField] Image[] myDi;
 
     [SerializeField] private Image front;
     [SerializeField] private Image back;
 
-    private CardType type; 
- 
 
+    private  CardType cardType;
+
+ 
     public  void setBack()
     {
-        this.type = CardType.back;
+        this.cardType = CardType.back;
         this.front.gameObject.SetActive(false);
         this.back.gameObject.SetActive(true);
        // this.GetComponent<Image>.s
@@ -31,7 +29,7 @@ public class Card : MonoBehaviour
 
     public void setFront(uint value)
     {
-       this.type  = CardType.front;
+       this.cardType  = CardType.front;
         this.front.gameObject.SetActive(true);
         this.back.gameObject.SetActive(false);
     }
@@ -48,8 +46,5 @@ public class Card : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
-    }
+   
 }

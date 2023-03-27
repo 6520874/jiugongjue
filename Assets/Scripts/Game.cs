@@ -13,8 +13,8 @@ public class Game : MonoBehaviour
     [SerializeField] private GameObject enemyHpObj;
     [SerializeField] private GameObject bg;
 
-    private Player m_player = new Player();
-    private Player m_enemy = new Player();
+    //private Player m_player = new Player();
+    //private Player m_enemy = new Player();
 
     private float curTime = 0;
 
@@ -45,15 +45,15 @@ public class Game : MonoBehaviour
         //dotwen插件
 
         CreatePorker();
+
+        m_player.isMy = true;
         //Debug.Log("awake");
         ////DOLocalMove
         //myHpObj.transform.DOLocalMove(new Vector2(10, 20), 3f);
         //myHpObj.transform.DOMove(new Vector2(100, 200),5f);
 
 
-  
 
-   
 
 
     }
@@ -70,8 +70,12 @@ public class Game : MonoBehaviour
                 if (obj != null)
                 {
                     GameObject tt = (GameObject)Instantiate(obj, bg.transform);
+
+                      
                     tt.transform.localPosition = Vector3.zero;
                     this.m_cards.Add(tt);
+
+                   
         
                     //tt.transform.parent = bg.transform.parent;
                 }
@@ -89,23 +93,10 @@ public class Game : MonoBehaviour
     {
          
         
-        //   myHp.text = "0";
-        //   enemyHp.text = "0";
 
 
 
     }
-
-    //  public void SetMyHp(int hp)
-    //  {
-    //      myHp.text = hp.ToString();
-    //  }
-
-
-    //  public void SetEnemyHp(int hp)
-    //  {
-    //      enemyHp.text = hp.ToString();
-    //  }
 
 
 
@@ -123,12 +114,14 @@ public class Game : MonoBehaviour
                 {
                     //向自己发牌
                     m_cards[m_sendPk]?.GetComponent<Card>().setFront(1);
-                    //m_cards[m_sendPk]?.GetComponent<Card>().
-                   m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, -500), 2);
+                    //m_cards[m_sendPk]?.GetComponent<Card>().type = CardType.front;
+                    m_player.handCard.Add(m_cards[m_sendPk]);
+
+                   m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, -500), 0.1f);
 
                    
                     //向电脑发牌
-                    m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, 500), 2);
+                    m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, 500), 0.1f);
 
                 }
                 this.curTime = 0;
