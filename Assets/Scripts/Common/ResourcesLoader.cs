@@ -9,7 +9,20 @@ using UnityEngine;
 public class ResourcesLoader : Singleton<ResourcesLoader>
 {
     // Start is called before the first frame update
- 
+     
+    //加载资源
+    public  Sprite LoadSprite(string spritePath)
+    {
+        // 通过Resources.Load加载Sprite
+        Sprite sprite = Resources.Load<Sprite>(spritePath);
+
+        if (sprite == null)
+        {
+            Debug.LogError($"Failed to load sprite from path: {spritePath}");
+        }
+
+        return sprite;
+    }
 
 
     public void LoadAsync(string path, Action<UnityEngine.Object> onLoaded)

@@ -18,7 +18,7 @@ public class Game : MonoBehaviour
 
     private int id;
 
-    private readonly List<int> m_cards = new List<int>();
+    private  List<GameObject> m_cards = new List<GameObject>();
 
     public int Id
     {
@@ -40,32 +40,46 @@ public class Game : MonoBehaviour
 
         //dotwen插件
 
-        Debug.Log("awake");
-        //DOLocalMove
-        myHpObj.transform.DOLocalMove(new Vector2(10, 20), 3f);
+        CreatePorker();
+        //Debug.Log("awake");
+        ////DOLocalMove
+        //myHpObj.transform.DOLocalMove(new Vector2(10, 20), 3f);
         //myHpObj.transform.DOMove(new Vector2(100, 200),5f);
 
 
-        //加载资源
-        ResourcesLoader.Instance.LoadAsync("Prefeab/Card", (obj) =>
-        {
-            if (obj != null)
-            {
-                GameObject  tt = (GameObject)Instantiate(obj, bg.transform);                 
-
-            }
-            else
-            {
-                Debug.Log("<color=red>no obj</color>");
-            }
-        });
+  
 
    
 
 
     }
 
+ 
+    void CreatePorker()
+    {
 
+        for(int i= 0; i < 106; i++)
+        {
+            //加载资源
+            ResourcesLoader.Instance.LoadAsync("Prefeab/Card", (obj) =>
+            {
+                if (obj != null)
+                {
+                    GameObject tt = (GameObject)Instantiate(obj, bg.transform);
+                    tt.transform.localPosition = Vector3.zero;
+                    this.m_cards.Add(tt);
+        
+                    //tt.transform.parent = bg.transform.parent;
+                }
+                else
+                {
+                    Debug.Log("<color=red>no obj</color>");
+                }
+            });
+
+
+        }
+    }
 
     void Start()
     {
@@ -95,5 +109,10 @@ public class Game : MonoBehaviour
     void Update()
     {
 
+         if(m_cards.Count > 0)
+        {
+            m_cards[0].transform.DOLocalMove(new Vector2(0, -500), 1);
+             
+        }
     }
 }

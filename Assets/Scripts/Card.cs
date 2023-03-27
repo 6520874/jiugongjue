@@ -9,6 +9,11 @@ public class Card : MonoBehaviour
 
     [SerializeField] private Text myHp;
 
+    //[SerializeField] Image myDi;
+
+    [SerializeField] private Image front;
+    [SerializeField] private Image back;
+
     uint type = 0; //0 ÅÆÃæ  1ÅÆµ×
 
 
@@ -27,6 +32,18 @@ public class Card : MonoBehaviour
         }
     }
 
+    public  void setBack()
+    { 
+        this.front.gameObject.SetActive(false);
+        this.back.gameObject.SetActive(true);
+       // this.GetComponent<Image>.s
+    }
+
+    public void setFront(uint value)
+    {
+        this.front.gameObject.SetActive(true);
+        this.back.gameObject.SetActive(false);
+    }
     private void Awake()
     {
         this.Hp = 0;
