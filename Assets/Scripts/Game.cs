@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,12 +7,6 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    //  [SerializeField] private Text myHp;
-
-    //  [SerializeField] private Text enemyHp;
-
     [SerializeField] private GameObject myHpObj;
     [SerializeField] private GameObject enemyHpObj;
 
@@ -20,8 +15,6 @@ public class Game : MonoBehaviour
     
 
     private int id;
-
- 
 
     private readonly List<int> m_cards = new List<int>();
 
@@ -43,8 +36,16 @@ public class Game : MonoBehaviour
     private void Awake()
     {
 
+        //dotwen²å¼þ
 
-      
+        Debug.Log("awake");
+        //DOLocalMove
+        myHpObj.transform.DOLocalMove(new Vector2(10, 20), 3f);
+        //myHpObj.transform.DOMove(new Vector2(100, 200),5f);
+
+
+        ResourcesLoader.Instance.LoadAsync("",null);
+
 
     }
 
@@ -52,6 +53,8 @@ public class Game : MonoBehaviour
 
     void Start()
     {
+         
+        
         //   myHp.text = "0";
         //   enemyHp.text = "0";
 
