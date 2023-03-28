@@ -95,14 +95,8 @@ public class Game : MonoBehaviour
 
     void xiPai()
     {
-        Debug.Log("CNT"+m_cards.Count);
-
-        Shuffle(this.m_cards);
-
-        for(int i=0;i<m_cards.Count;i++) {
-
-            //m_cards[i].GetComponent<Card>().num = i;
-        }
+      
+       Shuffle(this.m_cards);
     }
 
     void CreatePorker()
@@ -117,26 +111,12 @@ public class Game : MonoBehaviour
                 {
                     GameObject tt = (GameObject)Instantiate(obj, bg.transform);
 
-
-                 
-
                     tt.transform.localPosition = Vector3.zero;
                  
                     this.m_cards.Add(tt);
 
 
                     tt.GetComponent<Card>().num = i;
-
-
-                    //Sprite sp = (Sprite)ResourcesLoader.Instance.LoadTexture("res/" + num);
-
-                    //if (sp)
-                    //{
-                    //    this.front.gameObject.GetComponent<Image>().sprite = sp;
-                    //}
-
-
-                    //tt.transform.parent = bg.transform.parent;
                 }
                 else
                 {

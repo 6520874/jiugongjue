@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
                     
                 //Debug.Log("Width"+width);
                 Vector3 pos = handCard[i].transform.position; 
-                handCard[i].transform.position  =  new Vector2(800+i*width*2/3 , pos.y);
+                handCard[i].transform.position  =  new Vector2(780+i*width*0.8f , pos.y);
             }
         }   
     }
