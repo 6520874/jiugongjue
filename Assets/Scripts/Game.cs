@@ -55,8 +55,22 @@ public class Game : MonoBehaviour
         ////DOLocalMove
         //myHpObj.transform.DOLocalMove(new Vector2(10, 20), 3f);
         //myHpObj.transform.DOMove(new Vector2(100, 200),5f);
+        //int screenWidth = Screen.width;
+        //int screenHeight = Screen.height;
+        //Debug.Log("Screen size: " + screenWidth + " x " + screenHeight);
 
 
+        CanvasScaler canvasScaler = FindObjectOfType<CanvasScaler>();
+        if (canvasScaler != null)
+        {
+            Vector2 referenceResolution = canvasScaler.referenceResolution;
+            Debug.Log("Canvas Reference Resolution: " + referenceResolution);
+        }
+
+        //// 获取屏幕分辨率
+        //int screenResolutionWidth = Screen.currentResolution.width;
+        //int screenResolutionHeight = Screen.currentResolution.height;
+        //Debug.Log("Screen resolution: " + screenResolutionWidth + " x " + screenResolutionHeight);      
 
 
 

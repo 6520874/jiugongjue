@@ -32,7 +32,9 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //int screenWidth = Screen.width;
+        //int screenHeight = Screen.height;
+        //Debug.Log("Screen size: " + screenWidth + " x " + screenHeight);
     }
 
     // Update is called once per fra
@@ -41,13 +43,16 @@ public class Player : MonoBehaviour
     { 
        //Debug.Log("update");
 
+   
+
         if (handCard.Count > 2 && isMy)
         {
+
             for(int i=0;i < handCard.Count;i++)
             {
                 //ÅÅÐò¿¨ÅÆÎ»ÖÃ
 
-                handCard[i].transform.position  =   new Vector2(i*200, handCard[i].transform.position.y);
+                handCard[i].transform.position  =   new Vector2(i*20, handCard[i].transform.position.y);
             }
         }
     }
