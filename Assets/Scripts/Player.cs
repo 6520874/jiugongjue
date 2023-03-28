@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     //手上的牌
@@ -45,11 +45,27 @@ public class Player : MonoBehaviour
         {
 
             for(int i=0;i < handCard.Count;i++)
-            {
+            {   
                 //排序卡牌位置
+                 
+                if(i == 2)
+                {
 
-                ///handCard[i].transform.position  =  new Vector2(i*20, handCard[i].transform.position.y);
+                }
+                else if(i == 3)
+                {
+
+                }   
+                else if(i==4) { 
+
+                }
+                    
+                 float width = handCard[i].GetComponentInChildren<Image>().rectTransform.rect.width;
+                    
+                Debug.Log("Width"+width);
+                Vector3 pos = handCard[i].transform.position; 
+                handCard[i].transform.position  =  new Vector2(800+i*width*2/3 , pos.y);
             }
-        }
+        }   
     }
 }

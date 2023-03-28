@@ -30,7 +30,7 @@ public class Card : MonoBehaviour
         this.cardType = CardType.back;
         this.front.gameObject.SetActive(false);
         this.back.gameObject.SetActive(true);
-       // this.GetComponent<Image>.s
+
     }
 
     public void setFront(uint value)
