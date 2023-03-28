@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
                     
                  float width = handCard[i].GetComponentInChildren<Image>().rectTransform.rect.width;
                     
-                Debug.Log("Width"+width);
+                //Debug.Log("Width"+width);
                 Vector3 pos = handCard[i].transform.position; 
                 handCard[i].transform.position  =  new Vector2(800+i*width*2/3 , pos.y);
             }

@@ -38,7 +38,10 @@ public class Game : MonoBehaviour
     }
 
 
-
+    public void eventClickBlock(EventData data)
+    {
+        Debug.Log("clickBlock");
+    }
 
     private void Awake()
     {
@@ -51,6 +54,11 @@ public class Game : MonoBehaviour
         m_enemy = this.gameObject.AddComponent<Player>();
 
         m_player.isMy = true;
+
+        EventType eventType = EventType.ClickBlock;
+       /// DelegateEvent.EventHandler listener = OnClickEventHandler();
+
+        EventManager.addEventListener(eventType, eventClickBlock);
         //Debug.Log("awake");
         ////DOLocalMove
         //myHpObj.transform.DOLocalMove(new Vector2(10, 20), 3f);
@@ -75,7 +83,9 @@ public class Game : MonoBehaviour
             
     }
 
- 
+  
+
+
     void CreatePorker()
     {
 

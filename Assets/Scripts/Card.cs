@@ -17,7 +17,7 @@ public class Card : MonoBehaviour
     [SerializeField] private Image front;
     [SerializeField] private Image back;
 
-    private float initPosy;
+
 
     private bool isChoose = false;
 
@@ -41,11 +41,6 @@ public class Card : MonoBehaviour
     }
     private void Awake()
     {
-        //Debug.Log("Awake");
-        // 
-
-        this.initPosy = this.gameObject.transform.position.y;
-
         this.gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(OnClick);
 
     }
@@ -54,10 +49,7 @@ public class Card : MonoBehaviour
     {
         Debug.Log("Button clicked!");
         Vector3 pos = this.gameObject.transform.position;
-
-        //Debug.Log("y"+ pos.y);
-       
-
+        EventManager.dispatchEvent(EventType.ClickBlock, "≤‚ ‘≤Œ ˝");
         if (!isChoose )
         { 
              
