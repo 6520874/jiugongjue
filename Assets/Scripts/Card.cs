@@ -16,8 +16,8 @@ public class Card : MonoBehaviour
 
     [SerializeField] private Image front;
     [SerializeField] private Image back;
-
-
+    [HideInInspector]
+    public bool isMine = false; 
 
     private bool isChoose = false;
 
@@ -42,28 +42,33 @@ public class Card : MonoBehaviour
     private void Awake()
     {
         this.gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(OnClick);
+        
 
     }
 
     void OnClick()
     {
-        Debug.Log("Button clicked!");
-        Vector3 pos = this.gameObject.transform.position;
-        EventManager.dispatchEvent(EventType.ClickBlock, "测试参数");
-        if (!isChoose )
-        { 
-             
-            pos.y += 20f;
-
-            isChoose = true;    
-        }
-        else
+        if (isMine)
         {
-            pos.y -= 20f;
-            isChoose = false;
+            Debug.Log("Button clicked!");
+            Vector3 pos = this.gameObject.transform.position;
+            EventManager.dispatchEvent(EventType.ClickBlock, "测试参数");
+            if (!isChoose)
+            {
+
+                pos.y += 20f;
+
+                isChoose = true;
+            }
+            else
+            {
+                pos.y -= 20f;
+                isChoose = false;
+
+            }
+            this.gameObject.transform.position = pos;
 
         }
-        this.gameObject.transform.position = pos;
 
     }
 
