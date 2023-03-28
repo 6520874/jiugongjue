@@ -63,6 +63,7 @@ public class Game : MonoBehaviour
         CanvasScaler canvasScaler = FindObjectOfType<CanvasScaler>();
         if (canvasScaler != null)
         {
+
             Vector2 referenceResolution = canvasScaler.referenceResolution;
             Debug.Log("Canvas Reference Resolution: " + referenceResolution);
         }

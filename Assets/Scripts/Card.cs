@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+    
+
 enum CardType
 {
     front = 0,
@@ -14,6 +16,10 @@ public class Card : MonoBehaviour
 
     [SerializeField] private Image front;
     [SerializeField] private Image back;
+
+    private float initPosy;
+
+    private bool isChoose = false;
 
 
     private  CardType cardType;
@@ -35,7 +41,37 @@ public class Card : MonoBehaviour
     }
     private void Awake()
     {
-         
+        //Debug.Log("Awake");
+        // 
+
+        this.initPosy = this.gameObject.transform.position.y;
+
+        this.gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(OnClick);
+
+    }
+
+    void OnClick()
+    {
+        Debug.Log("Button clicked!");
+        Vector3 pos = this.gameObject.transform.position;
+
+        //Debug.Log("y"+ pos.y);
+       
+
+        if (!isChoose )
+        { 
+             
+            pos.y += 20f;
+
+            isChoose = true;    
+        }
+        else
+        {
+            pos.y -= 20f;
+            isChoose = false;
+
+        }
+        this.gameObject.transform.position = pos;
 
     }
 

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     //手上的牌
     public List<GameObject>  handCard =  new List<GameObject>();
 
@@ -37,22 +36,19 @@ public class Player : MonoBehaviour
         //Debug.Log("Screen size: " + screenWidth + " x " + screenHeight);
     }
 
-    // Update is called once per fra
+
 
     private void Update()
     { 
-       //Debug.Log("update");
-
-   
-
-        if (handCard.Count > 2 && isMy)
+    
+        if (handCard.Count > 0 && isMy)
         {
 
             for(int i=0;i < handCard.Count;i++)
             {
                 //排序卡牌位置
 
-                handCard[i].transform.position  =   new Vector2(i*20, handCard[i].transform.position.y);
+                ///handCard[i].transform.position  =  new Vector2(i*20, handCard[i].transform.position.y);
             }
         }
     }
