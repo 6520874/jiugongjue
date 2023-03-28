@@ -12,7 +12,7 @@ enum CardType
 public class Card : MonoBehaviour
 {
   
-    [SerializeField] Image[] myDi;
+    [SerializeField] private Image[] cards;
 
     [SerializeField] private Image front;
     [SerializeField] private Image back;
@@ -39,8 +39,41 @@ public class Card : MonoBehaviour
         this.front.gameObject.SetActive(true);
         this.back.gameObject.SetActive(false);
     }
+
+    /*
+     
+    ResLoad_texture2d(fileName: string) {
+        let texture2D = Resources.Load(fileName) as Texture2D;
+        if (!texture2D) {
+            console.error("Not find texture:" + fileName);
+            return;
+        }
+        return texture2D;
+    }
+
+    ResLoad_sprite(fileName: string) {
+        let texture2D = this.ResLoad_texture2d(fileName);
+        if (!texture2D) {
+            return;
+        }
+        return Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), new Vector2(0.5, 0.5));
+    }
+
+     */
     private void Awake()
     {
+
+
+        Texture2D texture2D = (Texture2D)Resources.Load("res/2");
+        Sprite sp = null;
+        if (texture2D)
+        {
+            sp = Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
+            this.front.gameObject.GetComponent<Image>().sprite = sp;
+        } 
+
+      
+
         this.gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(OnClick);
         
 
