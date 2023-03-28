@@ -49,6 +49,17 @@ public class ResourcesLoader : Singleton<ResourcesLoader>
         }
     }
 
+   public Sprite LoadTexture(string path)
+    {
+
+        Texture2D texture2D = (Texture2D)Load(path);
+
+        if(texture2D)
+        {
+           return  Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
+        }
+         return null;
+    }
     public UnityEngine.Object Load(string path)
     {
         if (string.IsNullOrEmpty(path))

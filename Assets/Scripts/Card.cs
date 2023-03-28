@@ -64,11 +64,11 @@ public class Card : MonoBehaviour
     {
 
 
-        Texture2D texture2D = (Texture2D)Resources.Load("res/2");
-        Sprite sp = null;
-        if (texture2D)
+        Sprite sp =  (Sprite)ResourcesLoader.Instance.LoadTexture("res/2");
+
+        if (sp)
         {
-            sp = Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
+         
             this.front.gameObject.GetComponent<Image>().sprite = sp;
         } 
 
