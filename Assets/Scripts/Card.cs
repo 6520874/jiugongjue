@@ -17,7 +17,8 @@ public class Card : MonoBehaviour
     [SerializeField] private Image front;
     [SerializeField] private Image back;
     [HideInInspector]
-    public bool isMine = false; 
+    public bool isMine = false;
+    public int num = 0;
 
     private bool isChoose = false;
 
@@ -63,15 +64,9 @@ public class Card : MonoBehaviour
     private void Awake()
     {
 
-
-        Sprite sp =  (Sprite)ResourcesLoader.Instance.LoadTexture("res/2");
-
-        if (sp)
-        {
          
-            this.front.gameObject.GetComponent<Image>().sprite = sp;
-        } 
 
+      
       
 
         this.gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(OnClick);
@@ -79,6 +74,8 @@ public class Card : MonoBehaviour
 
     }
 
+
+  
     void OnClick()
     {
         if (isMine)
@@ -108,9 +105,16 @@ public class Card : MonoBehaviour
 
     void Start()
     {
+        Sprite sp = (Sprite)ResourcesLoader.Instance.LoadTexture("res/" + num);
+
+        if (sp)
+        {
+
+            this.front.gameObject.GetComponent<Image>().sprite = sp;
+        }
 
     }
 
     // Update is called once per frame
-   
+
 }

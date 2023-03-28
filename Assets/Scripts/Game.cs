@@ -97,6 +97,7 @@ public class Game : MonoBehaviour
 
                       
                     tt.transform.localPosition = Vector3.zero;
+                    tt.GetComponent<Card>().num = i;
                     this.m_cards.Add(tt);
 
                    
