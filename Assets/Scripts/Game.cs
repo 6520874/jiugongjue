@@ -61,11 +61,8 @@ public class Game : MonoBehaviour
         EventManager.addEventListener(eventType, eventClickBlock);
         //Debug.Log("awake");
         ////DOLocalMove
-        //myHpObj.transform.DOLocalMove(new Vector2(10, 20), 3f);
-        //myHpObj.transform.DOMove(new Vector2(100, 200),5f);
-        //int screenWidth = Screen.width;
-        //int screenHeight = Screen.height;
-        //Debug.Log("Screen size: " + screenWidth + " x " + screenHeight);
+
+
 
 
         CanvasScaler canvasScaler = FindObjectOfType<CanvasScaler>();
@@ -147,24 +144,24 @@ public class Game : MonoBehaviour
                     //m_cards[m_sendPk]?.GetComponent<Card>().type = CardType.front;
                     m_player.handCard.Add(m_cards[m_sendPk]);
                     m_cards[m_sendPk].GetComponent<Card>().isMine = true;
-                    m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, -500), 0.1f);
+                    m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, -550), 0.1f);
                     m_cards.Remove(obj);
 
                     //ÏòµçÄÔ·¢ÅÆ
                     obj = m_cards[m_sendPk];
                     m_cards[m_sendPk].GetComponent<Card>().isMine = false;
-                    m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, 500), 0.1f);
+                    m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, 550), 0.1f);
                     m_cards.Remove(obj);
                 }
                 else
                 {
                      //Ê£Óà¿¨ÅÆÒþ²Ø
-
                     for(int i=0; i<m_cards.Count;i++)
                     {
                         m_cards[i].SetActive(false);
                     }
-                     
+                    myHpObj.transform.DOLocalMove(new Vector2(-10, 20), 0.1f);
+                    enemyHpObj.transform.DOLocalMove(new Vector2(20, -30), 0.1f);
                 }
                 this.curTime = 0;
             }
