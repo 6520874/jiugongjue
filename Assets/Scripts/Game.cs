@@ -63,7 +63,7 @@ public class Game : MonoBehaviour
         CanvasScaler canvasScaler = FindObjectOfType<CanvasScaler>();
         if (canvasScaler != null)
         {
-
+            //s
             Vector2 referenceResolution = canvasScaler.referenceResolution;
             Debug.Log("Canvas Reference Resolution: " + referenceResolution);
         }
@@ -72,9 +72,7 @@ public class Game : MonoBehaviour
         //int screenResolutionWidth = Screen.currentResolution.width;
         //int screenResolutionHeight = Screen.currentResolution.height;
         //Debug.Log("Screen resolution: " + screenResolutionWidth + " x " + screenResolutionHeight);      
-
-
-
+            
     }
 
  

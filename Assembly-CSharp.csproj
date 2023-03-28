@@ -62,6 +62,7 @@
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
     <Compile Include="Assets\Scripts\Common\Singleton.cs" />
     <Compile Include="Assets\Scripts\Common\ResourcesLoader.cs" />
+    <Compile Include="Assets\Scripts\EventManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
