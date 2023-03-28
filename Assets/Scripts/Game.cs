@@ -3,8 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Resources;
-using System.Runtime.CompilerServices;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -49,6 +47,7 @@ public class Game : MonoBehaviour
         //dotwen²å¼þ
 
         CreatePorker();
+        xiPai();
         m_player =  this.gameObject.AddComponent<Player>();
 
         m_enemy = this.gameObject.AddComponent<Player>();
@@ -80,11 +79,34 @@ public class Game : MonoBehaviour
             
     }
 
-  
+    public static void Shuffle(List<GameObject> list)
+    {
+        System.Random rand = new System.Random();
+        for (int i = list.Count - 1; i > 0; i--)
+        {
+            int j = rand.Next(i + 1);
+            GameObject temp = list[j];
+            list[j] = list[i];
+            list[i] = temp;
+        }
+    }
 
+
+
+    void xiPai()
+    {
+        Debug.Log("CNT"+m_cards.Count);
+
+        Shuffle(this.m_cards);
+
+        for(int i=0;i<m_cards.Count;i++) {
+
+            //m_cards[i].GetComponent<Card>().num = i;
+        }
+    }
 
     void CreatePorker()
-    {
+    { 
 
         for(int i= 0; i < 106; i++)
         {
@@ -95,13 +117,25 @@ public class Game : MonoBehaviour
                 {
                     GameObject tt = (GameObject)Instantiate(obj, bg.transform);
 
-                      
+
+                 
+
                     tt.transform.localPosition = Vector3.zero;
-                    tt.GetComponent<Card>().num = i;
+                 
                     this.m_cards.Add(tt);
 
-                   
-        
+
+                    tt.GetComponent<Card>().num = i;
+
+
+                    //Sprite sp = (Sprite)ResourcesLoader.Instance.LoadTexture("res/" + num);
+
+                    //if (sp)
+                    //{
+                    //    this.front.gameObject.GetComponent<Image>().sprite = sp;
+                    //}
+
+
                     //tt.transform.parent = bg.transform.parent;
                 }
                 else

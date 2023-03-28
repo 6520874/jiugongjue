@@ -41,41 +41,12 @@ public class Card : MonoBehaviour
         this.back.gameObject.SetActive(false);
     }
 
-    /*
-     
-    ResLoad_texture2d(fileName: string) {
-        let texture2D = Resources.Load(fileName) as Texture2D;
-        if (!texture2D) {
-            console.error("Not find texture:" + fileName);
-            return;
-        }
-        return texture2D;
-    }
-
-    ResLoad_sprite(fileName: string) {
-        let texture2D = this.ResLoad_texture2d(fileName);
-        if (!texture2D) {
-            return;
-        }
-        return Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), new Vector2(0.5, 0.5));
-    }
-
-     */
     private void Awake()
     {
-
-         
-
-      
-      
-
         this.gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(OnClick);
-        
-
+       
     }
 
-
-  
     void OnClick()
     {
         if (isMine)
@@ -109,12 +80,11 @@ public class Card : MonoBehaviour
 
         if (sp)
         {
-
             this.front.gameObject.GetComponent<Image>().sprite = sp;
         }
 
     }
 
-    // Update is called once per frame
+
 
 }
