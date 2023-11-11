@@ -9,6 +9,8 @@ enum CardType
     front = 0,
     back = 1,
 }
+
+//è¯•ä¸€è¯• ç”¨chatgptç¿»è¯‘cocosçš„ä»£ç a
 public class Card : MonoBehaviour
 {
   
@@ -53,7 +55,7 @@ public class Card : MonoBehaviour
         {
             Debug.Log("Button clicked!");
             Vector3 pos = this.gameObject.transform.position;
-            EventManager.dispatchEvent(EventType.ClickBlock, "²âÊÔ²ÎÊı");
+            EventManager.dispatchEvent(EventType.ClickBlock, "ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½");
             if (!isChoose)
             {
 
