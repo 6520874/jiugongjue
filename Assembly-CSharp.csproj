@@ -49,6 +49,7 @@
      <Compile Include="Assets/Scripts/Common/EventManager.cs" />
      <Compile Include="Assets/Scripts/Common/ResourcesLoader.cs" />
      <Compile Include="Assets/Scripts/Game.cs" />
+     <Compile Include="Assets/Scripts/Poker.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/Demigiant/DOTween/DOTween43.xml" />
      <Folder Include="Assets/Demigiant/DemiLib/Core" />
