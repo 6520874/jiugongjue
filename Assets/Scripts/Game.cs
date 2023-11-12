@@ -6,7 +6,7 @@ using System.Resources;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Game : MonoBehaviour
+public class GameMain : MonoBehaviour
 {
     [SerializeField] private GameObject myHpObj;
     [SerializeField] private GameObject enemyHpObj;
@@ -20,6 +20,11 @@ public class Game : MonoBehaviour
     private int m_sendPk = 0;
 
     private int id;
+    
+    [SerializeField] private GameObject m_cardPrefab;
+   public  Button m_btnQipai;
+   public  Button m_btnAttack;
+
 
     private  List<GameObject> m_cards = new List<GameObject>();
 
@@ -44,7 +49,7 @@ public class Game : MonoBehaviour
     private void Awake()
     {
 
-        //dotwen²å¼ş
+        //dotwenæ’ä»¶
 
         CreatePorker();
         xiPai();
@@ -72,7 +77,7 @@ public class Game : MonoBehaviour
             Debug.Log("Canvas Reference Resolution: " + referenceResolution);
         }
 
-        //// »ñÈ¡ÆÁÄ»·Ö±æÂÊ
+        //// è·å–å±å¹•åˆ†è¾¨ç‡
         //int screenResolutionWidth = Screen.currentResolution.width;
         //int screenResolutionHeight = Screen.currentResolution.height;
         //Debug.Log("Screen resolution: " + screenResolutionWidth + " x " + screenResolutionHeight);      
@@ -104,7 +109,7 @@ public class Game : MonoBehaviour
 
         for(int i= 0; i < 106; i++)
         {
-            //¼ÓÔØ×ÊÔ´
+            //åŠ è½½èµ„æº
             ResourcesLoader.Instance.LoadAsync("Prefeab/Card", (obj) =>
             {
                 if (obj != null)
@@ -151,7 +156,7 @@ public class Game : MonoBehaviour
             {
                 if (m_sendPk < 8)
                 {
-                    //Ïò×Ô¼º·¢ÅÆ
+                    //å‘è‡ªå·±å‘ç‰Œ
                     m_cards[m_sendPk]?.GetComponent<Card>().setFront(1);
 
                     GameObject obj = m_cards[m_sendPk];
@@ -162,7 +167,7 @@ public class Game : MonoBehaviour
                     m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, -550), 0.1f);
                     m_cards.Remove(obj);
 
-                    //ÏòµçÄÔ·¢ÅÆ
+                    //å‘ç”µè„‘å‘ç‰Œ
                     obj = m_cards[m_sendPk];
                     m_cards[m_sendPk].GetComponent<Card>().isMine = false;
                     m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, 550), 0.1f);
@@ -170,7 +175,7 @@ public class Game : MonoBehaviour
                 }
                 else
                 {
-                     //Ê£Óà¿¨ÅÆÒş²Ø
+                     //å‰©ä½™å¡ç‰Œéšè—
                     for(int i=0; i<m_cards.Count;i++)
                     {
                         m_cards[i].SetActive(false);
