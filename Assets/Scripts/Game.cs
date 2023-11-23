@@ -47,7 +47,7 @@ public class Game : MonoBehaviour
         //dotwen²å¼þ
 
         CreatePorker();
-        xiPai();
+        XiPai();
         m_player =  this.gameObject.AddComponent<Player>();
 
         m_enemy = this.gameObject.AddComponent<Player>();
@@ -93,7 +93,7 @@ public class Game : MonoBehaviour
 
 
 
-    void xiPai()
+    void XiPai()
     {
       
        Shuffle(this.m_cards);
@@ -132,8 +132,8 @@ public class Game : MonoBehaviour
     {
          
         
-
-
+        
+        
 
     }
 
@@ -144,7 +144,8 @@ public class Game : MonoBehaviour
     {   
 
          if(m_cards.Count > 0)
-        {
+         {
+             Debug.Log("m_cards.Count" + m_cards.Count);
             this.curTime += Time.deltaTime;
 
             if(this.curTime> Config.FAPAITIME)
