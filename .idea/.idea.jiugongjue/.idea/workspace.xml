@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a382eef-19e9-4219-9eb1-e67be1cdee7d" name="Changes" comment="" />
+    <list default="true" id="9a382eef-19e9-4219-9eb1-e67be1cdee7d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.jiugongjue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.jiugongjue/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefeab/Card.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefeab/Card.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Card.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,6 +113,7 @@
       <updated>1699813395998</updated>
       <workItem from="1699813399483" duration="1120000" />
       <workItem from="1700749884920" duration="2501000" />
+      <workItem from="1700882076303" duration="4233000" />
     </task>
     <servers />
   </component>

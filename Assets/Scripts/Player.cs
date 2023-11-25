@@ -41,31 +41,31 @@ public class Player : MonoBehaviour
     private void Update()
     { 
     
-        if (handCard.Count > 0 && isMy)
-        {
-
-            for(int i=0;i < handCard.Count;i++)
-            {   
-                //ÅÅÐò¿¨ÅÆÎ»ÖÃ
-                 
-                if(i == 2)
-                {
-
-                }
-                else if(i == 3)
-                {
-
-                }   
-                else if(i==4) { 
-
-                }
-                    
-                 float width = handCard[i].GetComponentInChildren<Image>().rectTransform.rect.width;
-                    
-                //Debug.Log("Width"+width);
-                Vector3 pos = handCard[i].transform.position; 
-                handCard[i].transform.position  =  new Vector2(780+i*width*0.8f , pos.y);
-            }
-        }   
+        // if (handCard.Count > 0 && isMy)
+        // {
+        //
+        //     for(int i=0;i < handCard.Count;i++)
+        //     {   
+        //         //ÅÅÐò¿¨ÅÆÎ»ÖÃ
+        //          
+        //         if(i == 2)
+        //         {
+        //
+        //         }
+        //         else if(i == 3)
+        //         {
+        //
+        //         }   
+        //         else if(i==4) { 
+        //
+        //         }
+        //             
+        //          float width = handCard[i].GetComponentInChildren<Image>().rectTransform.rect.width;
+        //             
+        //         //Debug.Log("Width"+width);
+        //         Vector3 pos = handCard[i].transform.position; 
+        //         handCard[i].transform.position  =  new Vector2(780+i*width*0.8f , pos.y);
+        //     }
+        // }   
     }
 }

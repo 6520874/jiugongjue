@@ -11,6 +11,9 @@ public class Game : MonoBehaviour
     [SerializeField] private GameObject myHpObj;
     [SerializeField] private GameObject enemyHpObj;
     [SerializeField] private GameObject bg;
+    [SerializeField] private GameObject myCard;
+    [SerializeField] private GameObject cards;
+
 
     private Player m_player = null;
     private Player m_enemy = null;
@@ -60,17 +63,15 @@ public class Game : MonoBehaviour
         EventManager.addEventListener(eventType, eventClickBlock);
         //Debug.Log("awake");
         ////DOLocalMove
+        
 
-
-
-
-        CanvasScaler canvasScaler = FindObjectOfType<CanvasScaler>();
-        if (canvasScaler != null)
-        {
-            //s
-            Vector2 referenceResolution = canvasScaler.referenceResolution;
-            Debug.Log("Canvas Reference Resolution: " + referenceResolution);
-        }
+        // CanvasScaler canvasScaler = FindObjectOfType<CanvasScaler>();
+        // if (canvasScaler != null)
+        // {
+        //     //s
+        //     Vector2 referenceResolution = canvasScaler.referenceResolution;
+        //     Debug.Log("Canvas Reference Resolution: " + referenceResolution);
+        // }
 
         //// ��ȡ��Ļ�ֱ���
         //int screenResolutionWidth = Screen.currentResolution.width;
@@ -95,8 +96,7 @@ public class Game : MonoBehaviour
 
     void XiPai()
     {
-      
-       Shuffle(this.m_cards);
+        Shuffle(this.m_cards);
     }
 
     void CreatePorker()
@@ -112,6 +112,7 @@ public class Game : MonoBehaviour
                     GameObject tt = (GameObject)Instantiate(obj, bg.transform);
 
                     tt.transform.localPosition = Vector3.zero;
+                    tt.transform.parent = cards.transform;
                  
                     this.m_cards.Add(tt);
 
@@ -152,32 +153,43 @@ public class Game : MonoBehaviour
             {
                 if (m_sendPk < 8)
                 {
+                    //Debug.Log("m_sendPk" + m_sendPk);
                     //���Լ�����
-                    m_cards[m_sendPk]?.GetComponent<Card>().setFront(1);
+                    m_cards[m_sendPk].GetComponent<Card>().SetFront();
 
                     GameObject obj = m_cards[m_sendPk];
 
                     //m_cards[m_sendPk]?.GetComponent<Card>().type = CardType.front;
-                    m_player.handCard.Add(m_cards[m_sendPk]);
-                    m_cards[m_sendPk].GetComponent<Card>().isMine = true;
-                    m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, -550), 0.1f);
-                    m_cards.Remove(obj);
+                   // m_player.handCard.Add(m_cards[m_sendPk]);
+                    obj.GetComponent<Card>().isMine = true;
+                    //
+                    obj.transform.DOLocalMove(new Vector2(0, -550), 0.1f).OnComplete(() =>{
+                        m_cards[m_sendPk].transform.parent = myCard.transform;
+                        m_cards.Remove(obj);
+                        m_sendPk++;
+                        
+                        obj = m_cards[m_sendPk];
+                        m_cards[m_sendPk].GetComponent<Card>().SetBack();
+                        m_cards[m_sendPk].GetComponent<Card>().isMine = false;
+                        m_cards[m_sendPk].transform.DOLocalMove(new Vector2(0, 550), 0.1f);
+                        m_cards.Remove(obj);
+                        m_sendPk++;
+                });
+                   
+                
 
                     //����Է���
-                    obj = m_cards[m_sendPk];
-                    m_cards[m_sendPk].GetComponent<Card>().isMine = false;
-                    m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, 550), 0.1f);
-                    m_cards.Remove(obj);
+                
                 }
                 else
                 {
                      //ʣ�࿨������
-                    for(int i=0; i<m_cards.Count;i++)
-                    {
-                        m_cards[i].SetActive(false);
-                    }
-                    myHpObj.transform.DOLocalMove(new Vector2(-10, 20), 0.1f);
-                    enemyHpObj.transform.DOLocalMove(new Vector2(20, -30), 0.1f);
+                    // for(int i=0; i<m_cards.Count;i++)
+                    // {
+                    //     m_cards[i].SetActive(false);
+                    // }
+                    // myHpObj.transform.DOLocalMove(new Vector2(-10, 20), 0.1f);
+                    // enemyHpObj.transform.DOLocalMove(new Vector2(20, -30), 0.1f);
                 }
                 this.curTime = 0;
             }

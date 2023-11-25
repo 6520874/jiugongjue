@@ -26,7 +26,7 @@ public class Card : MonoBehaviour
     private  CardType cardType;
 
  
-    public  void setBack()
+    public  void SetBack()
     {
         this.cardType = CardType.back;
         this.front.gameObject.SetActive(false);
@@ -34,7 +34,7 @@ public class Card : MonoBehaviour
 
     }
 
-    public void setFront(uint value)
+    public void SetFront()
     {
        this.cardType  = CardType.front;
         this.front.gameObject.SetActive(true);
@@ -53,7 +53,7 @@ public class Card : MonoBehaviour
         {
             Debug.Log("Button clicked!");
             Vector3 pos = this.gameObject.transform.position;
-            EventManager.dispatchEvent(EventType.ClickBlock, "²âÊÔ²ÎÊý");
+            EventManager.dispatchEvent(EventType.ClickBlock, "ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½");
             if (!isChoose)
             {
 
