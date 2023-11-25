@@ -44,7 +44,7 @@ public class Game : MonoBehaviour
     private void Awake()
     {
 
-        //dotwen²å¼þ
+        //dotwenï¿½ï¿½ï¿½
 
         CreatePorker();
         XiPai();
@@ -72,7 +72,7 @@ public class Game : MonoBehaviour
             Debug.Log("Canvas Reference Resolution: " + referenceResolution);
         }
 
-        //// »ñÈ¡ÆÁÄ»·Ö±æÂÊ
+        //// ï¿½ï¿½È¡ï¿½ï¿½Ä»ï¿½Ö±ï¿½ï¿½ï¿½
         //int screenResolutionWidth = Screen.currentResolution.width;
         //int screenResolutionHeight = Screen.currentResolution.height;
         //Debug.Log("Screen resolution: " + screenResolutionWidth + " x " + screenResolutionHeight);      
@@ -104,7 +104,7 @@ public class Game : MonoBehaviour
 
         for(int i= 0; i < 106; i++)
         {
-            //¼ÓÔØ×ÊÔ´
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
             ResourcesLoader.Instance.LoadAsync("Prefeab/Card", (obj) =>
             {
                 if (obj != null)
@@ -145,14 +145,14 @@ public class Game : MonoBehaviour
 
          if(m_cards.Count > 0)
          {
-             Debug.Log("m_cards.Count" + m_cards.Count);
+            // Debug.Log("m_cards.Count" + m_cards.Count);
             this.curTime += Time.deltaTime;
 
             if(this.curTime> Config.FAPAITIME)
             {
                 if (m_sendPk < 8)
                 {
-                    //Ïò×Ô¼º·¢ÅÆ
+                    //ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½
                     m_cards[m_sendPk]?.GetComponent<Card>().setFront(1);
 
                     GameObject obj = m_cards[m_sendPk];
@@ -163,7 +163,7 @@ public class Game : MonoBehaviour
                     m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, -550), 0.1f);
                     m_cards.Remove(obj);
 
-                    //ÏòµçÄÔ·¢ÅÆ
+                    //ï¿½ï¿½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½
                     obj = m_cards[m_sendPk];
                     m_cards[m_sendPk].GetComponent<Card>().isMine = false;
                     m_cards[m_sendPk++].transform.DOLocalMove(new Vector2(0, 550), 0.1f);
@@ -171,7 +171,7 @@ public class Game : MonoBehaviour
                 }
                 else
                 {
-                     //Ê£Óà¿¨ÅÆÒþ²Ø
+                     //Ê£ï¿½à¿¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                     for(int i=0; i<m_cards.Count;i++)
                     {
                         m_cards[i].SetActive(false);
