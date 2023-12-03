@@ -44,7 +44,9 @@ public class Card : MonoBehaviour
     private void Awake()
     {
         this.gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(OnClick);
-       
+        
+        
+
     }
 
     void OnClick()
