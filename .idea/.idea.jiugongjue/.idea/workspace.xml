@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a382eef-19e9-4219-9eb1-e67be1cdee7d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.jiugongjue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.jiugongjue/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/res/res/atknormal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/res/res/atkpress.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/res/res/give.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/res/res/ignorenormal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/res/res/ignorepress.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/res/res/zhuomain.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +116,7 @@
       <workItem from="1699813399483" duration="1120000" />
       <workItem from="1700749884920" duration="2501000" />
       <workItem from="1700882076303" duration="5603000" />
-      <workItem from="1701584919162" duration="4523000" />
+      <workItem from="1701584919162" duration="5523000" />
     </task>
     <servers />
   </component>

@@ -14,21 +14,17 @@ public class LoginScene : MonoBehaviour
     {
 
         loginButton.onClick.AddListener(ReplaceScene);
+        
+       // GetComponent<AudioSource>().Play();
     }
     
     
     
 
     // Update is called once per frame
-    void Update()
-    {
-    
-        
-        
-    }
-    
-    
-    public void ReplaceScene()
+
+
+  private  void ReplaceScene()
     {
 
         SceneManager.LoadSceneAsync("Game");

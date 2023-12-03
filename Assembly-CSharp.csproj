@@ -51,6 +51,8 @@
      <Compile Include="Assets\Scripts\Common\ResourcesLoader.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\LoginScene.cs" />
+     <Compile Include="Assets\Scripts\PlayerManager.cs" />
+     <Compile Include="Assets\Scripts\EnemyManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\res\music" />
      <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
