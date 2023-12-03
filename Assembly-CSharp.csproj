@@ -42,6 +42,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Card.cs" />
+     <Compile Include="Assets\Scripts\EnemyManager.cs" />
+     <Compile Include="Assets\Scripts\PlayerManager.cs" />
      <Compile Include="Assets\Scripts\Config.cs" />
      <Compile Include="Assets\OpBtn.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
@@ -51,8 +53,6 @@
      <Compile Include="Assets\Scripts\Common\ResourcesLoader.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\LoginScene.cs" />
-     <Compile Include="Assets\Scripts\PlayerManager.cs" />
-     <Compile Include="Assets\Scripts\EnemyManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\res\music" />
      <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />

@@ -15,6 +15,7 @@ public class Game : MonoBehaviour
     [SerializeField] private GameObject cards;
     [SerializeField] private GameObject btns;
     
+    
 
 
     private Player m_player = null;
@@ -28,6 +29,8 @@ public class Game : MonoBehaviour
 
     private  List<GameObject> m_cards = new List<GameObject>();
 
+    public  static  Game Instance = null;
+    
     public int Id
     {
         get
@@ -41,6 +44,10 @@ public class Game : MonoBehaviour
     }
 
 
+    public void SetBtnsActive(bool isActive)
+    {
+        btns.SetActive(isActive);
+    }
     public void eventClickBlock(EventData data)
     {
         Debug.Log("clickBlock");
@@ -50,7 +57,7 @@ public class Game : MonoBehaviour
     {
 
         //dotwen���
-
+        Instance = this;
         CreatePorker();
         XiPai();
         m_player =  this.gameObject.AddComponent<Player>();
@@ -64,7 +71,7 @@ public class Game : MonoBehaviour
         EventManager.addEventListener(eventType, eventClickBlock);
         //Debug.Log("awake");
         ////DOLocalMove
-        btns.SetActive(false);
+
         
             
     }
@@ -121,7 +128,7 @@ public class Game : MonoBehaviour
     void Start()
     {
          
-        
+        btns.SetActive(false);
         
 
     }
@@ -130,8 +137,8 @@ public class Game : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
-
+    {
+        
          if(m_cards.Count > 0)
          {
             // Debug.Log("m_cards.Count" + m_cards.Count);
@@ -162,8 +169,11 @@ public class Game : MonoBehaviour
                         m_cards[m_sendPk].transform.DOLocalMove(new Vector2(0, 550), 0.1f);
                         m_cards.Remove(obj);
                         m_sendPk++;
-                        
-                        btns.SetActive(true);
+                        if (m_sendPk == 8)
+                        {
+                          // btns.SetActive(true); 
+                        }
+                    
 
                     });
                     

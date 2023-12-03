@@ -51,18 +51,20 @@ public class Card : MonoBehaviour
     {
         if (isMine)
         {
-            Debug.Log("Button clicked!");
+          //  Debug.Log("Button clicked!");
             Vector3 pos = this.gameObject.transform.position;
             EventManager.dispatchEvent(EventType.ClickBlock, "���Բ���");
             if (!isChoose)
             {
-
+                
+                Game.Instance.SetBtnsActive(true);
                 pos.y += 20f;
 
                 isChoose = true;
             }
             else
             {
+                Game.Instance.SetBtnsActive(false);
                 pos.y -= 20f;
                 isChoose = false;
 
