@@ -13,6 +13,8 @@ public class Game : MonoBehaviour
     [SerializeField] private GameObject bg;
     [SerializeField] private GameObject myCard;
     [SerializeField] private GameObject cards;
+    [SerializeField] private GameObject btns;
+    
 
 
     private Player m_player = null;
@@ -58,25 +60,12 @@ public class Game : MonoBehaviour
         m_player.isMy = true;
 
         EventType eventType = EventType.ClickBlock;
-       /// DelegateEvent.EventHandler listener = OnClickEventHandler();
-
+        
         EventManager.addEventListener(eventType, eventClickBlock);
         //Debug.Log("awake");
         ////DOLocalMove
+        btns.SetActive(false);
         
-
-        // CanvasScaler canvasScaler = FindObjectOfType<CanvasScaler>();
-        // if (canvasScaler != null)
-        // {
-        //     //s
-        //     Vector2 referenceResolution = canvasScaler.referenceResolution;
-        //     Debug.Log("Canvas Reference Resolution: " + referenceResolution);
-        // }
-
-        //// ��ȡ��Ļ�ֱ���
-        //int screenResolutionWidth = Screen.currentResolution.width;
-        //int screenResolutionHeight = Screen.currentResolution.height;
-        //Debug.Log("Screen resolution: " + screenResolutionWidth + " x " + screenResolutionHeight);      
             
     }
 
@@ -173,22 +162,22 @@ public class Game : MonoBehaviour
                         m_cards[m_sendPk].transform.DOLocalMove(new Vector2(0, 550), 0.1f);
                         m_cards.Remove(obj);
                         m_sendPk++;
-                });
-                   
-                
+                        
+                        btns.SetActive(true);
 
-                    //����Է���
+                    });
+                    
                 
                 }
                 else
                 {
                      //ʣ�࿨������
-                    // for(int i=0; i<m_cards.Count;i++)
-                    // {
-                    //     m_cards[i].SetActive(false);
-                    // }
-                    // myHpObj.transform.DOLocalMove(new Vector2(-10, 20), 0.1f);
-                    // enemyHpObj.transform.DOLocalMove(new Vector2(20, -30), 0.1f);
+                    for(int i=0; i<m_cards.Count;i++)
+                    {
+                        m_cards[i].SetActive(false);
+                    }
+                    myHpObj.transform.DOLocalMove(new Vector2(-10, 20), 0.1f);
+                    enemyHpObj.transform.DOLocalMove(new Vector2(20, -30), 0.1f);
                 }
                 this.curTime = 0;
             }

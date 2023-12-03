@@ -43,13 +43,16 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Card.cs" />
      <Compile Include="Assets\Scripts\Config.cs" />
+     <Compile Include="Assets\OpBtn.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Common\Singleton.cs" />
      <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
      <Compile Include="Assets\Scripts\Common\EventManager.cs" />
      <Compile Include="Assets\Scripts\Common\ResourcesLoader.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
+     <Compile Include="Assets\LoginScene.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\Resources\res\music" />
      <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
      <Folder Include="Assets\Demigiant\DemiLib\Core" />
      <Folder Include="Assets\Resources\music" />
@@ -61,7 +64,6 @@
      <Folder Include="Assets\Demigiant\DOTween" />
      <Folder Include="Assets\Resources\res" />
      <Folder Include="Assets\Resources" />
-     <Folder Include="Assets\Resources\res\res" />
      <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
      <Folder Include="Assets\Resources\Prefeab" />
      <Folder Include="Assets\Demigiant\DOTweenPro Examples\Examples Assets" />
