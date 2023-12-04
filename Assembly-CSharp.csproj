@@ -53,6 +53,8 @@
      <Compile Include="Assets\Scripts\Common\ResourcesLoader.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\LoginScene.cs" />
+     <Compile Include="Assets\Scripts\Socket\SocketClientSource.cs" />
+     <Compile Include="Assets\Scripts\Socket\SpliceByte.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\res\music" />
      <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
@@ -66,6 +68,7 @@
      <Folder Include="Assets\Demigiant\DOTween" />
      <Folder Include="Assets\Resources\res" />
      <Folder Include="Assets\Resources" />
+     <Folder Include="Assets\Scripts\Socket" />
      <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
      <Folder Include="Assets\Resources\Prefeab" />
      <Folder Include="Assets\Demigiant\DOTweenPro Examples\Examples Assets" />
