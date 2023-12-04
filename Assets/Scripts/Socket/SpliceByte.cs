@@ -30,9 +30,10 @@ public class SpliceByte
             
             if ((usedCount - 4) >= count)
             {
-                byte[] byteArray = data.Skip(4).Take(count).ToArray(); 
-           
-            
+                byte[] byteArray = data.Skip(4).Take(count).ToArray();
+
+                Debug.Log("byte"+byteArray.ToString());
+                
 
                 // GameManager.data.ParseProtobufData(byteArray);
                 Array.Copy(data, count + 4, data, 0, usedCount - 4 - count);

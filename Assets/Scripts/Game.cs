@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Resources;
 using UnityEngine;
 using UnityEngine.UI;
+using VSCodeEditor;
 
 public class Game : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Game : MonoBehaviour
     [SerializeField] private GameObject myCard;
     [SerializeField] private GameObject cards;
     [SerializeField] private GameObject btns;
+    [SerializeField] private Button socketBtn;
     
     
 
@@ -69,11 +71,21 @@ public class Game : MonoBehaviour
         EventType eventType = EventType.ClickBlock;
         
         EventManager.addEventListener(eventType, eventClickBlock);
+        
+        socketBtn.onClick.AddListener(OnClientConnect);
         //Debug.Log("awake");
         ////DOLocalMove
 
+
+
+    }
+
+    private void OnClientConnect()
+    {
+        Debug.Log("OnClientConnect");
+         SocketClientSource.GetInstance().StartLocalClient();
         
-            
+
     }
 
     public static void Shuffle(List<GameObject> list)
