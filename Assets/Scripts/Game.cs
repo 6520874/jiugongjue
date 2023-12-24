@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Resources;
 using UnityEngine;
 using UnityEngine.UI;
-using VSCodeEditor;
 
 public class Game : MonoBehaviour
 {
