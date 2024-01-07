@@ -47,7 +47,9 @@
      <Compile Include="Assets\Scripts\Common\Singleton.cs" />
      <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
      <Compile Include="Assets\Scripts\Socket\SocketClientSource.cs" />
+     <Compile Include="Assets\Scripts\AddressablesExample.cs" />
      <Compile Include="Assets\LoginScene.cs" />
+     <Compile Include="Assets\Samples\Addressables\1.19.19\Addressables Utility\AddressablesUtility.cs" />
      <Compile Include="Assets\Scripts\PlayerManager.cs" />
      <Compile Include="Assets\Scripts\Config.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
@@ -57,7 +59,6 @@
      <Compile Include="Assets\Scripts\Game.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\Round-Shape-Flow.shader" />
-     <Folder Include="Assets\MyTest" />
      <Folder Include="Assets\Resources\res\music" />
      <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
      <Folder Include="Assets\Demigiant\DemiLib\Core" />
@@ -66,10 +67,14 @@
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
      <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
+     <Folder Include="Assets\AddressableAssetsData\AssetGroups" />
+     <Folder Include="Assets\Resources_moved\music" />
+     <Folder Include="Assets\AddressableAssetsData" />
      <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
      <Folder Include="Assets\Demigiant\DemiLib" />
      <Folder Include="Assets\Demigiant\DOTween" />
      <Folder Include="Assets\WebGLTemplates\WXTemplate2022" />
+     <Folder Include="Assets\Samples\Addressables" />
      <Folder Include="Assets\Resources\res" />
      <Folder Include="Assets\WebGLTemplates\WXTemplate" />
      <Folder Include="Assets\Resources" />
@@ -78,15 +83,22 @@
      <Folder Include="Assets\Resources\Prefeab" />
      <Folder Include="Assets\WX-WASM-SDK-V2" />
      <Folder Include="Assets\Demigiant\DOTweenPro Examples\Examples Assets" />
+     <Folder Include="Assets\Samples\Addressables\1.19.19\Addressables Utility" />
      <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
      <Folder Include="Assets\WebGLTemplates" />
      <Folder Include="Assets\WebGLTemplates\WXTemplate2022\TemplateData" />
      <Folder Include="Assets\Scripts\Common" />
      <None Include="Assets\Demigiant\DOTween\readme.txt" />
+     <Folder Include="Assets\Samples" />
      <Folder Include="Assets\Demigiant" />
      <Folder Include="Assets\Demigiant\DOTweenPro Examples" />
+     <Folder Include="Assets\AddressableAssetsData\DataBuilders" />
+     <Folder Include="Assets\AddressableAssetsData\AssetGroupTemplates" />
      <Folder Include="Assets\Settings" />
+     <Folder Include="Assets\Resources_moved" />
      <None Include="Assets\Border.shader" />
+     <Folder Include="Assets\AddressableAssetsData\AssetGroups\Schemas" />
+     <Folder Include="Assets\Samples\Addressables\1.19.19" />
      <Folder Include="Assets\Demigiant\DOTweenPro" />
      <Folder Include="Assets\Scripts" />
      <Reference Include="UnityEngine">
@@ -329,29 +341,17 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>D:\Program Files\Unity 2021.3.21f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
-     <Reference Include="DemiLib">
-     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
      <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil">
-     <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="DOTween">
      <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <Reference Include="Unity.FontABTool">
+     <HintPath>D:\Games\jiugongjue\Assets\WX-WASM-SDK-V2\Runtime\Plugins\Unity.FontABTool.dll</HintPath>
      </Reference>
      <Reference Include="DOTween46">
      <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\DOTween46.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween43">
-     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\DOTween43.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenPro">
      <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
@@ -359,14 +359,26 @@
      <Reference Include="DOTween50">
      <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\DOTween50.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.FontABTool">
-     <HintPath>D:\Games\jiugongjue\Assets\WX-WASM-SDK-V2\Runtime\Plugins\Unity.FontABTool.dll</HintPath>
-     </Reference>
      <Reference Include="wx-runtime-editor">
      <HintPath>D:\Games\jiugongjue\Assets\WX-WASM-SDK-V2\Runtime\Plugins\wx-runtime-editor.dll</HintPath>
      </Reference>
+     <Reference Include="DemiLib">
+     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Mdb">
+     <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil">
+     <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     </Reference>
      <Reference Include="LitJson">
      <HintPath>D:\Games\jiugongjue\Assets\WX-WASM-SDK-V2\Runtime\Plugins\LitJson.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Rocks">
+     <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween43">
+     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\DOTween43.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>D:\Program Files\Unity 2021.3.21f1c1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -755,17 +767,17 @@
      <Reference Include="PsdPlugin">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     <Reference Include="Unity.Addressables">
+     <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEditor.CacheServer">
+     <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="PPv2URPConverters">
-     <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -782,14 +794,17 @@
      <Reference Include="Unity.2D.IK.Editor">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Tilemap.Editor">
+     <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Psdimporter.Editor">
-     <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.2D.Path.Editor">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ResourceManager">
+     <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
@@ -809,6 +824,9 @@
      <Reference Include="UnityEngine.UI">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Psdimporter.Editor">
+     <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.InternalAPIEditorBridge.001">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
@@ -820,6 +838,9 @@
      </Reference>
      <Reference Include="Unity.ShaderGraph.Editor">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
@@ -848,8 +869,17 @@
      <Reference Include="Unity.2D.Common.Runtime">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline">
+     <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.2D.SpriteShape.Editor">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Addressables.Editor">
+     <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+     <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Editor">
      <HintPath>D:\Games\jiugongjue\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>

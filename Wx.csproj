@@ -41,11 +41,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\WX-WASM-SDK-V2\Runtime\WXBase.cs" />
+     <Compile Include="Assets\WX-WASM-SDK-V2\Runtime\HideLoadingPage.cs" />
+     <Compile Include="Assets\WX-WASM-SDK-V2\Runtime\WX.cs" />
      <Compile Include="Assets\WX-WASM-SDK-V2\Runtime\WXTouchInputOverride.cs" />
      <Compile Include="Assets\WX-WASM-SDK-V2\Runtime\WXProfileStatsScript.cs" />
-     <Compile Include="Assets\WX-WASM-SDK-V2\Runtime\WX.cs" />
-     <Compile Include="Assets\WX-WASM-SDK-V2\Runtime\HideLoadingPage.cs" />
-     <Compile Include="Assets\WX-WASM-SDK-V2\Runtime\WXBase.cs" />
      <None Include="Assets\WX-WASM-SDK-V2\Runtime\Plugins\link.xml" />
      <Folder Include="Assets\WX-WASM-SDK-V2\Runtime\Plugins" />
      <Folder Include="Assets\WX-WASM-SDK-V2\Runtime\wechat-default\data-package" />
@@ -321,8 +321,32 @@
      <Reference Include="UnityEditor.WindowsStandalone.Extensions">
      <HintPath>D:\Program Files\Unity 2021.3.21f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Burst.Cecil.Pdb">
+     <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     </Reference>
+     <Reference Include="log4netPlastic">
+     <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.FontABTool">
+     <HintPath>D:\Games\jiugongjue\Assets\WX-WASM-SDK-V2\Runtime\Plugins\Unity.FontABTool.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween46">
+     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\DOTween46.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTweenPro">
+     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween50">
+     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\DOTween50.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
      <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="wx-runtime-editor">
+     <HintPath>D:\Games\jiugongjue\Assets\WX-WASM-SDK-V2\Runtime\Plugins\wx-runtime-editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
      <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
@@ -333,11 +357,11 @@
      <Reference Include="DemiLib">
      <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
      </Reference>
-     <Reference Include="DOTweenEditor">
-     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
      <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTweenEditor">
+     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
      <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
@@ -345,44 +369,20 @@
      <Reference Include="DemiEditor">
      <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Burst.Cecil">
      <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
-     </Reference>
-     <Reference Include="log4netPlastic">
-     <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\DOTween.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween46">
-     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\DOTween46.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween43">
-     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\DOTween43.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTweenPro">
-     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween50">
-     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\DOTween50.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.FontABTool">
-     <HintPath>D:\Games\jiugongjue\Assets\WX-WASM-SDK-V2\Runtime\Plugins\Unity.FontABTool.dll</HintPath>
-     </Reference>
-     <Reference Include="wx-runtime-editor">
-     <HintPath>D:\Games\jiugongjue\Assets\WX-WASM-SDK-V2\Runtime\Plugins\wx-runtime-editor.dll</HintPath>
      </Reference>
      <Reference Include="wx-editor">
      <HintPath>D:\Games\jiugongjue\Assets\WX-WASM-SDK-V2\Editor\wx-editor.dll</HintPath>
      </Reference>
      <Reference Include="LitJson">
      <HintPath>D:\Games\jiugongjue\Assets\WX-WASM-SDK-V2\Runtime\Plugins\LitJson.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Rocks">
+     <HintPath>D:\Games\jiugongjue\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween43">
+     <HintPath>D:\Games\jiugongjue\Assets\Demigiant\DOTween\DOTween43.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>D:\Program Files\Unity 2021.3.21f1c1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
