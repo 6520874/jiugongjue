@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Config.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Common\EventManager.cs" />
+     <Compile Include="Assets\Scripts\Test\TestAddressable.cs" />
      <Compile Include="Assets\Scripts\Socket\SpliceByte.cs" />
      <Compile Include="Assets\Scripts\Common\ResourcesLoader.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
@@ -61,19 +62,25 @@
      <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
      <Folder Include="Assets\Demigiant\DemiLib\Core" />
      <Folder Include="Assets\Resources\music" />
+     <Folder Include="Assets\AddressableAssetsData\DataBuilders" />
      <Folder Include="Assets\Scenes" />
+     <Folder Include="Assets\AddressableAssetsData" />
      <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
      <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
      <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
      <Folder Include="Assets\Demigiant\DemiLib" />
+     <Folder Include="Assets\AddressableAssetsData\AssetGroups\Schemas" />
+     <Folder Include="Assets\AddressableAssetsData\AssetGroups" />
      <Folder Include="Assets\Demigiant\DOTween" />
      <Folder Include="Assets\Resources\res" />
      <Folder Include="Assets\Resources" />
      <Folder Include="Assets\Scripts\Socket" />
+     <Folder Include="Assets\Scripts\Test" />
      <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
      <Folder Include="Assets\Resources\Prefeab" />
      <Folder Include="Assets\Demigiant\DOTweenPro Examples\Examples Assets" />
      <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
+     <Folder Include="Assets\AddressableAssetsData\AssetGroupTemplates" />
      <Folder Include="Assets\Scripts\Common" />
      <None Include="Assets\Demigiant\DOTween\readme.txt" />
      <Folder Include="Assets\Demigiant" />
@@ -740,17 +747,17 @@
      <Reference Include="PsdPlugin">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     <Reference Include="Unity.Addressables">
+     <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEditor.CacheServer">
+     <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="PPv2URPConverters">
-     <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -767,14 +774,17 @@
      <Reference Include="Unity.2D.IK.Editor">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Tilemap.Editor">
+     <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Psdimporter.Editor">
-     <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.2D.Path.Editor">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ResourceManager">
+     <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
@@ -794,6 +804,9 @@
      <Reference Include="UnityEngine.UI">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Psdimporter.Editor">
+     <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.InternalAPIEditorBridge.001">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
@@ -805,6 +818,9 @@
      </Reference>
      <Reference Include="Unity.ShaderGraph.Editor">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
@@ -833,8 +849,17 @@
      <Reference Include="Unity.2D.Common.Runtime">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline">
+     <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.2D.SpriteShape.Editor">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Addressables.Editor">
+     <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+     <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Editor">
      <HintPath>D:\unityproj\jiugongjue\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
