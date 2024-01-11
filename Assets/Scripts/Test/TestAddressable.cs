@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 
 namespace Test
@@ -10,6 +11,21 @@ namespace Test
     public class TestAddressable : MonoBehaviour
     {
         // Start is called before the first frame update
+        async void Awake()
+        {
+            Debug.Log("异步操作开始");
+            await MyAsyncMethod();
+            Debug.Log("异步操作完成");
+        }
+        
+        private async Task MyAsyncMethod()
+        {
+            // 模拟一个耗时操作
+            await Task.Delay(2000); // 等待 2 秒
+            Debug.Log("在 MyAsyncMethod 中的异步操作");
+        }
+        
+
         void Start()
         {
              StartCoroutine(LoadMyAsset2());
@@ -62,7 +78,9 @@ namespace Test
                 Debug.Log("Asset loaded successfully!");
 
                 // 你可以在这里使用加载的资源，例如实例化它
-                 var obj  = Instantiate(myAsset);
+                var obj = Instantiate(myAsset, this.transform);
+                     
+                     //Instantiate(myAsset);
 
                  obj.transform.parent = this.transform;
                  // 当不再需要资源时，释放它
