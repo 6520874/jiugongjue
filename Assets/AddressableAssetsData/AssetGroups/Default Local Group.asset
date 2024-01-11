@@ -15,16 +15,20 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_Data:
     m_SerializedData: []
-  m_GUID: 6262e42251692894a85f6f9e6d33016f
+  m_GUID: 78435e39feb13aa4087271ad81a10e89
   m_SerializeEntries:
-  - m_GUID: 1165ce646ec88cf48af530fb001e32e0
-    m_Address: music/csmj
+  - m_GUID: 31321ba15b8f8eb4c954353edc038b1d
+    m_Address: MyAsset
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
+  - m_GUID: 711c27e6d1e6ec941a8d8ba4240bcbc0
+    m_Address: Prefeab/Card
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
-  m_Settings: {fileID: 11400000, guid: 987278cc6d02dc1498bae17e242a4168, type: 2}
+  m_Settings: {fileID: 11400000, guid: b356a32ee794c304e8e199b0c4026a0c, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: e00dff74ca1832e46b453df099ef09ee, type: 2}
-    - {fileID: 11400000, guid: f804650132adc7040a548aa14e212157, type: 2}
+    - {fileID: 11400000, guid: e817a2c2f99c7a444b1b4879823e1589, type: 2}
+    - {fileID: 11400000, guid: 7229592a198ef3043aa878e14b4d0d57, type: 2}
