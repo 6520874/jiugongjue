@@ -73,6 +73,7 @@
      <Folder Include="Assets\AddressableAssetsData\AssetGroups" />
      <Folder Include="Assets\Demigiant\DOTween" />
      <Folder Include="Assets\Resources\res" />
+     <Folder Include="Assets\AddressableAssetsData\Windows" />
      <Folder Include="Assets\Resources" />
      <Folder Include="Assets\Scripts\Socket" />
      <Folder Include="Assets\Scripts\Test" />
